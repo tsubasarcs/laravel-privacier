@@ -23,5 +23,6 @@
                 "Privacier": "Tsubasarcs\\Privacier\\Facades\\Privacier"
             }
         }
-    }
+    },
+    "minimum-stability": "stable"
 }
