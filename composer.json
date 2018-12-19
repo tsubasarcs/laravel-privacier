@@ -1,0 +1,16 @@
+{
+    "name": "tsubasarcs/privacier",
+    "description": "Taiwan privacy policy record.",
+    "authors": [
+        {
+            "name": "tsubasarcs",
+            "email": "tsubasarcs@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Tsubasarcs\\Privacier\\": "src/"
+        }
+    }
+}
