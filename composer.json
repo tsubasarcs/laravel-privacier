@@ -14,12 +14,13 @@
         }
     },
     "extra": {
+        "component": "package",
         "laravel": {
             "providers": [
                 "Tsubasarcs\\Privacier\\Providers\\PrivacyServiceProvider"
             ],
             "aliases": {
-                "Privacier": "Tsubasarcs\\Privacier\\Facade"
+                "Privacier": "Tsubasarcs\\Privacier\\Facades"
             }
         }
     }
