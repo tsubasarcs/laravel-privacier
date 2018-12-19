@@ -12,5 +12,15 @@
         "psr-4": {
             "Tsubasarcs\\Privacier\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tsubasarcs\\Privacier\\Providers\\WinkServiceProvider"
+            ],
+            "aliases": {
+                "Privacier": "Tsubasarcs\\Privacier\\Facade"
+            }
+        }
     }
 }
