@@ -4,7 +4,6 @@ namespace Tsubasarcs\Privacier\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Tsubasarcs\Privacier\Facades\Privacier;
 
 class PrivacyServiceProvider extends ServiceProvider
 {
