@@ -10,7 +10,14 @@
             "email": "tsubasarcs@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "php": ">=7.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.0",
+        "phpunit/phpunit": "^7.0",
+        "laravel/laravel": ">=5.3"
+    },
     "autoload": {
         "psr-4": {
             "Tsubasarcs\\Privacier\\": "src/"
