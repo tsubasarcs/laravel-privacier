@@ -27,5 +27,5 @@
             }
         }
     },
-    "minimum-stability": "0.7.0"
+    "minimum-stability": "stable"
 }
