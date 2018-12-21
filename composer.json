@@ -3,7 +3,7 @@
     "description": "Taiwan privacy policy record.",
     "keywords": ["laravel", "privacy"],
     "license": "MIT",
-    "homepage": "https://github.com/tsubasarcs/privacier",
+    "homepage": "https://github.com/tsubasarcs/laravel-privacier",
     "authors": [
         {
             "name": "tsubasarcs",
