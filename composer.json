@@ -1,5 +1,5 @@
 {
-    "name": "tsubasarcs/privacier",
+    "name": "tsubasarcs/laravel-privacier",
     "description": "Taiwan privacy policy record.",
     "keywords": ["laravel", "privacy"],
     "license": "MIT",
