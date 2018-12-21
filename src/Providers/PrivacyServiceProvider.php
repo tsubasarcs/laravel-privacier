@@ -27,7 +27,7 @@ class PrivacyServiceProvider extends ServiceProvider
         if (config('privacy.setup_store_routes')) {
             $path = config('privacy.path');
             Route::group([
-                'namespace' => 'Components\Privacy\Http\Controllers',
+                'namespace' => 'Tsubasarcs\Privacier\Http\Controllers',
                 'middleware' => 'web',
                 'prefix' => $path,
                 'as' => 'local_packages.' . $path . '.',
