@@ -4,13 +4,9 @@ namespace Tsubasarcs\Privacier\Tests;
 
 use Tsubasarcs\Privacier\Privacy;
 use Tsubasarcs\Privacier\Services\PrivacyService;
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class PrivacyServiceTest extends TestCase
 {
-    use RefreshDatabase;
-
     /**
      * @test
      * @group privacy
