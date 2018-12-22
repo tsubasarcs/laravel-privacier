@@ -10,12 +10,12 @@ class PrivacyService
 
     public function __construct()
     {
-        $this->model = config('privacy.model');
+        $this->model = config('privacy.models.class_name');
     }
 
-    public function updateOrCreate(array $attributes, string $whereData): Model
+    public function updateOrCreate(string $attribute, array $values): Model
     {
-        return $this->model::updateOrCreate([config('privacy.update_guidelines_column') => $whereData], $attributes);
+        return $this->model::updateOrCreate([config('privacy.models.names.update_attribute') => $attribute], $values);
     }
 
     public function existUid(string $uid): bool
@@ -30,6 +30,6 @@ class PrivacyService
 
     public function exists(string $attribute): bool
     {
-        return $this->model::where(config('privacy.column'), $attribute)->exists();
+        return $this->model::where(config('privacy.models.names.store_column'), $attribute)->exists();
     }
 }

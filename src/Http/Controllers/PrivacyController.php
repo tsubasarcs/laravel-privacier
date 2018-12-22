@@ -10,10 +10,8 @@ class PrivacyController extends Controller
     public function store()
     {
         Privacier::updateOrCreate(
-            [
-                config('privacy.column') => session(config('privacy.session_uid_key'))
-            ],
-            session(config('privacy.session_update_guidelines_key'))
+            session(config('privacy.sessions.keys.update')),
+            [config('privacy.models.names.store_column') => session(config('privacy.sessions.keys.store'))]
         );
 
         return response()->json(['message' => config('privacy.messages.store')]);
@@ -23,9 +21,9 @@ class PrivacyController extends Controller
     {
         return response()->json(['message' => config('privacy.messages.set_cookie')])
             ->cookie(
-                config('privacy.cookie.name'),
-                bcrypt(config('privacy.cookie.value')),
-                config('privacy.cookie.minutes')
+                config('privacy.cookies.name'),
+                bcrypt(config('privacy.cookies.value')),
+                config('privacy.cookies.minutes')
             );
     }
 }

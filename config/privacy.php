@@ -1,13 +1,23 @@
 <?php
 return [
-    'model' => Tsubasarcs\Privacier\Privacy::class,
-    'column' => 'uid',
-    'update_guidelines_column' => 'uid',
-    'session_update_guidelines_key' => 'member.uid',
-    'path' => 'privacy',
-    'setup_store_routes' => true,
-    'session_uid_key' => 'member.uid',
-    'cookie' => [
+    'service_providers' => [
+        'path' => 'privacy',
+        'routes' => true,
+    ],
+    'models' => [
+        'class_name' => Tsubasarcs\Privacier\Privacy::class,
+        'names' => [
+            'store_column' => 'uid',
+            'update_attribute' => 'uid',
+        ],
+    ],
+    'sessions' => [
+        'keys' => [
+            'store' => 'member.uid',
+            'update' => 'member.uid',
+        ],
+    ],
+    'cookies' => [
         'name' => 'parenting_privacy',
         'value' => 'I love Parenting',
         'minutes' => 525600, // a year

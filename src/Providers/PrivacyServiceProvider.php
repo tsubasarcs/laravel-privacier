@@ -24,13 +24,13 @@ class PrivacyServiceProvider extends ServiceProvider
             ], 'config');
         }
 
-        if (config('privacy.setup_store_routes')) {
-            $path = config('privacy.path');
+        if (config('privacy.service_providers.routes')) {
+            $path = config('privacy.service_providers.path');
             Route::group([
                 'namespace' => 'Tsubasarcs\Privacier\Http\Controllers',
                 'middleware' => 'web',
                 'prefix' => $path,
-                'as' => 'local_packages.' . $path . '.',
+                'as' => $path . '.',
             ], function () {
                 Route::post('/store', 'PrivacyController@store')->name('store');
                 Route::post('/set/cookie', 'PrivacyController@setCookie')->name('set_cookie');

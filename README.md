@@ -39,4 +39,19 @@ If you want to change some parameter, you can run the following on your terminal
 $ php artisan vendor:publish --provider="Tsubasarcs\Privacier\Providers\PrivacyServiceProvider" --tag="config"
 ```
 
-If you need more examples and documentation, see [documentation](https://github.com/tsubasarcs/laravel-privacier/wiki)..
+# Usage
+Laravel-privacier provides two routes for store user confirm Privacy Policy and set privacy cookie for guest after confirm Privacy Policy.
+``` php
+route('privacy.store') // /privacy/store
+route('privacy.set_cookie') // /privacy/set_cookie
+```
+
+Use Facade Privacier
+``` php
+Privacier::updateOrCreate(string $attribute_key, array $values); //return model
+Privacier::existUid($uid); //return bool
+Privacier::exists($attribute); //return bool
+```
+
+# License
+Laravel-privacier is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
